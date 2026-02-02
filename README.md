@@ -6,7 +6,7 @@ Run [OpenClaw](https://github.com/openclaw/openclaw) (formerly Moltbot, formerly
 
 > **Experimental:** This is a proof of concept demonstrating that OpenClaw can run in Cloudflare Sandbox. It is not officially supported and may break without notice. Use at your own risk.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/moltworker)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/tattoo0811/moltbot-sandbox-new)
 
 ## Requirements
 
@@ -40,6 +40,8 @@ This project packages OpenClaw to run in a [Cloudflare Sandbox](https://develope
 ![moltworker architecture](./assets/architecture.png)
 
 ## Quick Start
+
+> **Note:** If you already have an R2 bucket named `moltbot-data` in your Cloudflare account, edit `wrangler.jsonc` and change the bucket name to avoid conflicts.
 
 _Cloudflare Sandboxes are available on the [Workers Paid plan](https://dash.cloudflare.com/?to=/:account/workers/plans)._
 
