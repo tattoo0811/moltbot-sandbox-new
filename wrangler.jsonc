@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "moltbot-sandbox-v2",
+  "name": "moltbot-sandbox",
   "main": "src/index.ts",
   "compatibility_date": "2025-05-06",
   "compatibility_flags": ["nodejs_compat"],
@@ -49,6 +49,12 @@
       },
     ],
   },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["Sandbox"],
+    },
+  ],
   // R2 bucket for persistent storage (moltbot data, conversations, etc.)
   "r2_buckets": [
     {
