@@ -4,7 +4,7 @@ import type { Sandbox } from '@cloudflare/sandbox';
  * Environment bindings for the Moltbot Worker
  */
 export interface MoltbotEnv {
-  Sandbox: DurableObjectNamespace<Sandbox>;
+  Sandbox: DurableObjectNamespace<Sandbox>; // Binding name (must match wrangler.jsonc durable_objects.bindings[].name)
   ASSETS: Fetcher; // Assets binding for admin UI static files
   MOLTBOT_BUCKET: R2Bucket; // R2 bucket for persistent storage
   // AI Gateway configuration (preferred)

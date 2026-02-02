@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "moltbot-sandbox",
+  "name": "moltbot-sandbox-new",
   "main": "src/index.ts",
   "compatibility_date": "2025-05-06",
   "compatibility_flags": ["nodejs_compat"],
@@ -35,7 +35,7 @@
   // Container configuration for the Moltbot sandbox
   "containers": [
     {
-      "class_name": "Sandbox",
+      "class_name": "MoltbotSandbox",
       "image": "./Dockerfile",
       "instance_type": "standard-4",
       "max_instances": 1,
@@ -44,7 +44,7 @@
   "durable_objects": {
     "bindings": [
       {
-        "class_name": "Sandbox",
+        "class_name": "MoltbotSandbox",
         "name": "Sandbox",
       },
     ],
