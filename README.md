@@ -41,7 +41,11 @@ This project packages OpenClaw to run in a [Cloudflare Sandbox](https://develope
 
 ## Quick Start
 
-> **Note:** If you already have an R2 bucket named `moltbot-data` in your Cloudflare account, edit `wrangler.jsonc` and change the bucket name to avoid conflicts.
+> **Important:** If you already have a Worker or R2 bucket with the same names in your Cloudflare account, you'll need to rename them in `wrangler.jsonc` before deploying:
+> - Worker name: `moltbot-sandbox` (line 3)
+> - R2 bucket name: `moltbot-data` (line 62)
+>
+> Edit `wrangler.jsonc` and change these to unique names if you have conflicts.
 
 _Cloudflare Sandboxes are available on the [Workers Paid plan](https://dash.cloudflare.com/?to=/:account/workers/plans)._
 
@@ -457,6 +461,10 @@ OpenClaw in Cloudflare Sandbox uses multiple authentication layers:
 ## Troubleshooting
 
 **`npm run dev` fails with an `Unauthorized` error:** You need to enable Cloudflare Containers in the [Containers dashboard](https://dash.cloudflare.com/?to=/:account/workers/containers)
+
+**Deploy fails with "already exists" or "namespace conflict":** You already have a Worker or R2 bucket with the same name. Edit `wrangler.jsonc` and change:
+- `name` (Worker name) on line 3
+- `bucket_name` (R2 bucket) on line 62
 
 **Gateway fails to start:** Check `npx wrangler secret list` and `npx wrangler tail`
 
