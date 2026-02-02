@@ -35,7 +35,7 @@
   // Container configuration for the Moltbot sandbox
   "containers": [
     {
-      "class_name": "MoltbotSandbox",
+      "class_name": "Sandbox",
       "image": "./Dockerfile",
       "instance_type": "standard-4",
       "max_instances": 1,
@@ -44,7 +44,7 @@
   "durable_objects": {
     "bindings": [
       {
-        "class_name": "MoltbotSandbox",
+        "class_name": "Sandbox",
         "name": "Sandbox",
       },
     ],
